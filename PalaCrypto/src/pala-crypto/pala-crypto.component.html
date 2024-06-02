@@ -1,0 +1,137 @@
+<div class="container">
+    <div class="trading">
+        <div class="information">
+            <div class="item">
+                <select class="text" [(ngModel)]="selectedOption" (ngModelChange)="reload($event)">
+                    <option value="redstone" selected>Redstone</option>
+                    <option value="gold-ingot">Gold</option>
+                    <option value="spider-eye">Spider Eye</option>
+                    <option value="wheat-seeds">Graine de Blé</option>
+                    <option value="red-mushroom">Mushroom</option>
+                    <option value="coal">Charbon</option>
+                    <option value="tile-passifwither-head">Wither Passif</option>
+                    <option value="egg">Oeuf</option>
+                    <option value="string">String</option>
+                    <option value="potato">Patate</option>
+                    <option value="obsidian">Obsidienne</option>
+                    <option value="cactus">Cactus</option>
+                    <option value="wool">Laine</option>
+                    <option value="paladium-ingot">Paladium Ingot</option>
+                    <option value="apple">Pomme</option>
+                    <option value="slime-ball">Slime ball</option>
+                    <option value="quartz">Quartz</option>
+                    <option value="brown-mushroom">Brown Mushroom</option>
+                    <option value="diamond">Ghast Tear</option>
+                    <option value="fermented-spider-eye">Oeuil Fermenter</option>
+                    <option value="flint">Silex</option>
+                    <option value="feather">Feather</option>
+                    <option value="dirt">Dirt</option>
+                    <option value="log">Bois</option>
+                    <option value="dye">Poche d'encre</option>
+                    <option value="nether-wart">Nether Wart</option>
+                    <option value="carrot">Carrot</option>
+                    <option value="blaze-rod">Blaze Rod</option>
+                    <option value="bone">Os</option>
+                    <option value="sand">Sable</option>
+                    <option value="ender-pearl">Ender Pearl</option>
+                    <option value="melon">Melon</option>
+                    <option value="cooked-beef">Steak</option>
+                    <option value="gunpowder">GunPowder</option>
+                    <option value="glowstone-dust">Glowstone</option>
+                    <option value="titane-ingot">Titane Ingot</option>
+                    <option value="reeds">Canne à Sucre</option>
+                    <option value="leather">Leather</option>
+                    <option value="diamond">Diamond</option>
+                    <option value="cobblestone">CobbleStone</option>
+                    <option value="iron-ingot">Iron Ingot</option>
+                    <option value="soul-sand">Soulsand</option>
+                    <option value="emerald">Emeraude</option>
+                    <option value="amethyst-ingot">Amethyst Ingot</option>
+                    <option value="findium">Findium</option>
+                    <option value="skull-1">Wither Skull</option>
+                  </select>
+            </div>
+            <div class="data">
+                <div class="containerData">
+                    <h2 class="textData"> 1,50 </h2>
+                    <h3 class="textData"> $1,61 </h3>
+                </div>
+                <div class="containerData">
+                    <h2 class="titleData"> 24h Change </h2>
+                    <h3 class="textData"> 0.11 + 0.56% </h3>
+                </div>
+                <div class="containerData">
+                    <h2 class="titleData"> 24h High </h2>
+                    <h3 class="textData"> 1.60</h3>
+                </div>
+                <div class="containerData">
+                    <h2 class="titleData"> 24h Low </h2>
+                    <h3 class="textData"> 1.49 </h3>
+                </div>
+            </div>
+        </div>
+        <div class="analytique">
+            <div class="log">
+                <div class="bouton">
+                    <img class="trie" (click)="GetLastDifference()" src="../assets/TrieNeutre.png"/>
+                    <img class="trie" (click)="GetLastDifferencePositive()" src="../assets/TriePositif.png"/>
+                    <img class="trie" (click)="GetLastDifferenceNegative()" src="../assets/TrieNegatif.png"/>
+                </div>
+                <div class="logListe">
+                    <div class="headerListe">
+                        <h5 class="textDataTitle"> Nouveau Prix </h5>
+                        <h5 class="textDataTitle"> Ancien Prix </h5>
+                        <h5 class="textDataTitle"> Pourcentage </h5>
+                    </div>
+                    <div class="logData">
+                        <div *ngFor="let data of listData" class="logSingle">
+                            <h5 *ngIf="data.newPrice > data.lastPrice" class="textDataTitle TextGreen"> {{data.newPrice}} </h5>
+                            <h5 *ngIf="data.newPrice < data.lastPrice" class="textDataTitle TextRed">{{data.newPrice}} </h5>
+                            <h5 class="textDataTitle"> {{data.lastPrice}} </h5>
+                            <h5 class="textDataTitle"> {{data.pourcentage}} %</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tableau">
+                <div class="options">
+                    <h4 class="textDataTitle2"> Temps </h4>
+                    <h4 class="textOptionTitle" (click)="updatetime('1','h')"> 1h </h4>
+                    <h4 class="textOptionTitle" (click)="updatetime('4','h')"> 4h </h4>
+                    <h4 class="textOptionTitle" (click)="updatetime('12','h')"> 12h </h4>
+                    <h4 class="textOptionTitle" (click)="updatetime('1','D')"> 1D </h4>
+                    <h4 class="textOptionTitle" (click)="updatetime('1','W')"> 1W </h4>
+                    <h4 class="textOptionTitle" (click)="updatetime('1','M')"> 1M </h4>
+                    <h4 class="textOptionTitle" (click)="updatetime('4','M')"> 4M </h4>
+                    <h4 class="textOptionTitle" (click)="updatetime('1','Y')"> 1Y </h4>
+                </div>
+                <div class="chart">
+                    <div #chartContainer style="height: 100%; width: 100%;"></div>
+                </div>
+            </div>   
+        </div>
+    </div>
+    <div class="search">
+        <div class="searchHeader">
+            <div clas="searchBar">
+                <input class="bar" type="text" placeholder="Search...">
+            </div>
+        </div>
+        <div class="searchResult">
+            <div class="headerListebar">
+                <h5 class="textDataTitle"> Objet </h5>
+                <h5 class="textDataTitle"> Prix </h5>
+                <h5 class="textDataTitle"> Change </h5>
+            </div>
+            <div class="logData">
+                <div *ngFor="let data of listSearch" class="logSingle">
+                    <h5 class="textDataTitle"> {{data.item}} </h5>
+                    <h5 *ngIf="data.newPrice > data.lastPrice" class="textDataTitle TextGreen"> {{data.newPrice}} </h5>
+                    <h5 *ngIf="data.newPrice < data.lastPrice" class="textDataTitle TextRed">{{data.newPrice}} </h5>
+                    <h5 *ngIf="data.newPrice > data.lastPrice" class="textDataTitle TextGreen"> {{data.pourcentage}} %</h5>
+                    <h5 *ngIf="data.newPrice < data.lastPrice" class="textDataTitle TextRed">{{data.pourcentage}} % </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

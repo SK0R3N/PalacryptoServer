@@ -1,0 +1,50 @@
+html {
+    background-color: #161313 ;
+}
+
+body {
+    margin: 0 ; 
+}
+
+.navigation {
+    border-style: solid;
+    
+    border-top:#312C2C ;
+    border-left:#312C2C  ;
+    border-right:#312C2C ;
+    border-color: rgba(49,44,44,0.3) 
+}
+
+.logo {
+    padding-left: 60px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+.footer {
+    display: flex;
+    justify-content: center;
+
+    border-style: solid;
+    border-bottom:#312C2C ;
+    border-left:#312C2C  ;
+    border-right:#312C2C ;
+    border-color: rgba(49,44,44,0.3) 
+}
+
+.text {
+    color: #AFAEA5;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;    
+}
+
+router-outlet{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

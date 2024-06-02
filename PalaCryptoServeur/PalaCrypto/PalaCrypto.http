@@ -1,0 +1,6 @@
+@PalaCrypto_HostAddress = http://localhost:5237
+
+GET {{PalaCrypto_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

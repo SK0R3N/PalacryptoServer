@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    background-color: #161313;
+    margin: 0 !important;
+}
+
+
+@font-face {
+    font-family: 'Inter' ;
+    src: url('./assets/fonts/Inter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-size: normal;
+}
+@font-face {
+    font-family: 'Inter' ;
+    src: url('./assets/fonts/Inter-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-size: normal;
+}
+@font-face {
+    font-family: 'Inter' ;
+    src: url('./assets/fonts/Inter-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-size: normal;
+}

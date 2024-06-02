@@ -1,0 +1,278 @@
+.container{
+    height: 830px;
+    display: flex;
+    max-width: 1920px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.trading {
+    display: inline-block;
+    width: 80%;
+    height: 100%;
+    border-style: solid;
+    border-top:#312C2C;
+    border-bottom: #312C2C;
+    border-color: rgba(49,44,44,0.3) 
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 100%;
+
+}
+
+.searchHeader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 10%;
+
+}
+
+.bar {
+    padding: 10px;
+    width: 100%;
+    height: 20%;
+    background: none;
+    border: 4px solid #24231e;
+    border-radius: 50px;
+    box-sizing: border-box;
+    font-size: 13px;
+    color:#AFAEA5;
+    outline: none;
+
+}
+
+.information {
+    display: flex;
+    height: 10%;
+    width: 100%;
+
+}
+
+.analytique {
+    display: flex;
+    height: 90%;
+    width: 100%;
+
+}
+
+.trie {
+    width: 27px;
+    height: 27px;
+    padding: 20px;
+    padding-top: 40px;
+
+}
+
+.log{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 25%;
+}
+
+.bouton{
+    height: 15%;
+    width: 100%;
+}
+
+.logListe{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    border-right: #312C2C ;
+    border-color: rgba(49,44,44,0.3) 
+}
+
+.headerListe{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 5%;
+    width: 100%;
+}
+
+.searchResult {
+    width: 100%;
+    height: 90%;
+}
+
+.headerListebar{
+    display: flex;
+    padding-top: 10px;
+    align-items: center;
+    justify-content: space-around;
+    height: 5%;
+    width: 100%;
+}
+.logData{
+    height: 95%;
+    width: 100%;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.tableau{
+    height: 100%;
+    width: 75%;
+    border-style: solid;
+    border-color: rgba(49,44,44,0.3);
+    border-bottom: #312C2C;
+    border-right: #312C2C;
+    border-top: #312C2C;
+}
+
+.options {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 10%;
+    width: 60%;
+
+}
+
+.chart {
+    height: 90%;
+    width: 100%;
+}
+
+.text {
+    color: #AFAEA5;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background-color: #161313;    
+    border: none;
+}
+
+.item {
+    width: auto;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+    border-style: solid;
+    border-top:#312C2C;
+    border-color: rgba(49,44,44,0.3) 
+
+}
+
+.data {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-style: solid;
+    border-top:#312C2C;
+    border-left:#312C2C ;
+    border-right:#312C2C ;
+    border-color: rgba(49,44,44,0.3) 
+
+}
+
+h1 {
+    margin-block: 0px ;
+}
+
+.textData{
+    margin-block: 0px;
+    color: #AFAEA5;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;    
+}
+
+.textDataTitle2{
+    padding: 5px;
+    margin-block: 0px;
+    color: #72716C;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;  
+    transition: 0.5s;
+}
+
+.textDataTitle{
+    padding: 5px;
+    margin-block: 0px;
+    color: #72716C;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;  
+    transition: 0.5s;
+}
+
+.textOptionTitle{
+    padding: 5px;
+    margin-block: 0px;
+    color: #72716C;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;  
+    transition: 0.5s;
+}
+
+.textOptionTitle:hover{
+    padding: 5px;
+    margin-block: 0px;
+    color: #CAB813;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;  
+}
+
+.titleData{
+    margin-block: 0px;
+    color: #72716C; 
+    font-family: Inter;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.containerData{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.logSingle{
+    
+    display: flex;
+    justify-content: space-around;
+}
+
+.TextGreen{
+    color: #5A9C59  ;
+}
+
+.TextRed{
+    color: #C74D46;
+}
+
+
+:host{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
